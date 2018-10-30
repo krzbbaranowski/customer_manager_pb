@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:background="@null">
+
+    <View
+            android:id="@+id/separator_left"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:background="#FF4789"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    <FFImageLoading.Cross.MvxCachedImageView
+            android:id="@+id/avatar"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:MvxBind="LoadingPlaceholderImagePath 'res:placeholder.jpg';ErrorPlaceholderImagePath  'res:placeholder.jpg'; ImagePath AvatarUrl"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toEndOf="@+id/separator_left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Tomasz jakis"
+            android:textColor="@color/text_color"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:MvxBind="Text FullName"
+            app:layout_constraintStart_toEndOf="@+id/avatar"
+            app:layout_constraintTop_toTopOf="@+id/avatar" />
+
+
+    <ImageView
+            android:id="@+id/phone_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/phone"
+            app:layout_constraintBottom_toTopOf="@+id/separator_bottom"
+            app:layout_constraintStart_toEndOf="@+id/avatar"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+            android:id="@+id/telephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="TextView"
+            android:textColor="@color/text_color"
+            android:textSize="12dp"
+            app:MvxBind="Text Number"
+            app:layout_constraintBottom_toTopOf="@+id/separator_bottom"
+            app:layout_constraintStart_toEndOf="@+id/phone_icon"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <View
+            android:id="@+id/separator_bottom"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#40333333"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>
