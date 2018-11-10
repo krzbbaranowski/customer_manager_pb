@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="cxk-wN-pdQ" customClass="CustomersCellView">
+            <rect key="frame" x="0.0" y="0.0" width="557" height="103"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="557" height="102.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CIP-h2-A2X" userLabel="SeparatorLeft">
+                        <rect key="frame" x="0.0" y="15" width="5" height="72.5"/>
+                        <color key="backgroundColor" red="1" green="0.2784313725" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="6lf-sp-7wj"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rbD-De-upn" userLabel="Avatar" customClass="MvxCachedImageView">
+                        <rect key="frame" x="20" y="10" width="82.5" height="82.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="rbD-De-upn" secondAttribute="height" multiplier="1:1" id="Hun-EU-Gp3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFd-yh-qsY" userLabel="Name">
+                        <rect key="frame" x="122.5" y="10" width="52" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="GWw-Dy-tbB" userLabel="Tel" customClass="CircularMvxImageView">
+                        <rect key="frame" x="122.5" y="44" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="y0q-qb-q2t"/>
+                            <constraint firstAttribute="width" secondItem="GWw-Dy-tbB" secondAttribute="height" multiplier="1:1" id="zU6-Dm-wNU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxo-dL-hXb" userLabel="Number">
+                        <rect key="frame" x="148.5" y="13" width="36" height="78"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rbD-De-upn" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="10" id="DId-lo-ynG"/>
+                    <constraint firstItem="rbD-De-upn" firstAttribute="leading" secondItem="CIP-h2-A2X" secondAttribute="trailing" constant="15" id="E1E-tP-0tl"/>
+                    <constraint firstItem="GWw-Dy-tbB" firstAttribute="top" secondItem="LFd-yh-qsY" secondAttribute="bottom" constant="10" id="EqH-lq-XBi"/>
+                    <constraint firstAttribute="bottom" secondItem="CIP-h2-A2X" secondAttribute="bottom" constant="15" id="FWY-hi-ehc"/>
+                    <constraint firstItem="LFd-yh-qsY" firstAttribute="leading" secondItem="rbD-De-upn" secondAttribute="trailing" constant="20" id="GrF-Jm-Nqn"/>
+                    <constraint firstItem="CIP-h2-A2X" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="IaB-go-sNx"/>
+                    <constraint firstItem="GWw-Dy-tbB" firstAttribute="leading" secondItem="LFd-yh-qsY" secondAttribute="leading" id="T91-a7-zd4"/>
+                    <constraint firstItem="nxo-dL-hXb" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="topMargin" constant="2" id="Yx2-BG-gDk"/>
+                    <constraint firstItem="GWw-Dy-tbB" firstAttribute="centerY" secondItem="nxo-dL-hXb" secondAttribute="centerY" id="bGf-iu-zmv"/>
+                    <constraint firstItem="LFd-yh-qsY" firstAttribute="top" secondItem="rbD-De-upn" secondAttribute="top" id="fcC-VP-oJt"/>
+                    <constraint firstItem="nxo-dL-hXb" firstAttribute="leading" secondItem="GWw-Dy-tbB" secondAttribute="trailing" constant="10" id="hYo-z1-3hj"/>
+                    <constraint firstItem="CIP-h2-A2X" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="15" id="oFm-vq-GOz"/>
+                    <constraint firstAttribute="bottom" secondItem="rbD-De-upn" secondAttribute="bottom" constant="10" id="wtH-FQ-Ot8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="CustomerAvatar" destination="rbD-De-upn" id="MWY-9m-yG7"/>
+                <outlet property="CustomerName" destination="LFd-yh-qsY" id="z3y-8Y-DiM"/>
+                <outlet property="CustomerTelephoneNumber" destination="nxo-dL-hXb" id="xIj-Mv-Vla"/>
+            </connections>
+            <point key="canvasLocation" x="223.19999999999999" y="80.50974512743629"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="phone" width="48" height="48"/>
+    </resources>
+</document>
